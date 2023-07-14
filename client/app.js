@@ -17,6 +17,7 @@ const login = event => {
     loginForm.classList.remove('show');
     messagesSection.classList.add('show');
     addMessageForm.classList.add('show');
+    socket.emit('join', userName);
   } else {
     alert('Enter your username');
   }
